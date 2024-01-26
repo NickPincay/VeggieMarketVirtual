@@ -1,0 +1,120 @@
+.container-fluid {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.container-products {
+    height: 100%;
+    background-color: var(--color-muted);
+    border-radius: 3rem 3rem 0 0;
+    border: 8px solid var(--color-muted);
+}
+ 
+.col-filter {
+    background: var(--color-background);
+    border-radius: 2.8rem 0 2.8rem 0;
+    border: 2px solid var(--color-text);
+    box-shadow: 4px 4px var(--color-text);
+}
+
+.col-filter img {
+    height: 2rem;
+}
+
+.col-filter p {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+
+.input-search{
+    border: 1px solid var(--color-muted);
+    border-radius: 1rem;
+    padding: .2rem .6rem;
+    padding-right: .5rem;
+    background: var(--color-muted);
+}
+
+.input-search input{
+    border: none;
+    background-color: var(--color-muted);
+    color: white;
+    font-size: smaller;
+}
+
+.input-search input::placeholder{
+    color: white;    
+}
+
+.input-search input:focus{
+    outline: none;
+}
+
+.input-search .input-search-icon{
+    background-color: white;
+    border-radius: 50%;
+    padding: .2rem;
+}
+
+.input-search mat-icon{
+    font-size: 1rem;
+    padding-top: .2rem;
+    padding-left: .2rem;
+    color: var(--White);
+}
+
+
+.btn-link {
+    color: black;
+    font-size: small;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.radio-button {
+    margin: 5px;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: var(--color-muted);
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: var(--color-muted);
+}
+
+::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: var(--color-muted);
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background-color: var(--color-muted);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: #333;
+    height: 4px;
+}
+
+.container .col p {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+    padding: 0 2.5rem;
+}
+
+.container .col:first-child {
+    border-right: 3px solid var(--color-muted);    
+}

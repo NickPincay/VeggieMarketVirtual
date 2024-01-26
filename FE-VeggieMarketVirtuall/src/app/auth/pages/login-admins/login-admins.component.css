@@ -1,0 +1,122 @@
+.container-fluid {
+    background-color: var(--color-background);
+}
+
+.container-custom {
+    background: url(../../../../assets/img/auth/Banner-Login-Admins.png) no-repeat center;
+    background-size: cover;
+}
+
+form {
+    overflow: hidden;
+    background-color: white;
+    padding: 40px 30px 30px 30px;
+    border-radius: 10px;
+    border: 2px solid var(--color-text);
+    box-shadow: 4px 4px var(--color-text);
+    position: absolute;
+    top: 50%;
+    left: 15rem;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    transition: transform 300ms, box-shadow 300ms;
+}
+
+form::before,
+form::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 40%;
+    z-index: -1;
+}
+
+form::before {
+    left: 40%;
+    bottom: -130%;
+    background-color: rgba(21, 115, 52, 0.724);
+    animation: wawes 6s infinite linear;
+}
+
+form::after {
+    left: 35%;
+    bottom: -125%;
+    background-color: rgba(14, 154, 84, 0.633);
+    animation: wawes 7s infinite;
+}
+
+.text-title {
+    font-family: 'wilkysta', sans-serif;
+    font-size: xxx-large;
+    color: var(--color-text);
+}
+
+.text-subtitle mat-icon {
+    font-size: medium;
+    color: var(--color-muted);
+}
+
+.text-subtitle {
+    font-family: 'Gilroy-Light', sans-serif;
+    font-size: x-small;
+    color: var(--color-muted);
+}
+
+.title-login span {
+    font-size: xx-large;
+    font-family: 'wilkysta', sans-serif;
+    color: var(--color-text);
+}
+
+.btn-sm div span {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.btn-dark {
+    background-color: var(--color-muted);
+    border: none;
+    outline: none;
+    transition: ease-in-out 225ms;
+}
+
+.btn-dark:hover {
+    background-color: var(--color-text);
+}
+
+.btn-dark:active {
+    background-color: #4b4747;
+}
+
+.text-footer span {
+    font-size: small;
+}
+
+.text-footer span a {
+    color: var(--color-muted);
+    font-weight: bold;
+    transition: ease-in-out 125ms;
+}
+
+.text-footer span a:hover {
+    color: var(--color-text);
+}
+
+.div-warning {
+    left: 1%;
+    bottom: 0;
+    font-size: x-small;
+}
+.div-warning p {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+
+@keyframes wawes {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}

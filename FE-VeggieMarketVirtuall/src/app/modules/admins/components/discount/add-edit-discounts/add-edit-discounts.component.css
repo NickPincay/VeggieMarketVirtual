@@ -1,0 +1,52 @@
+::ng-deep.mat-dialog-container {
+    background-color: var(--color-background);
+}
+
+.col-imagen{
+    background: url(https://2.bp.blogspot.com/-IrhkrBoXv88/UPM9dTHL0nI/AAAAAAABfSE/eba7800mz88/s1600/Verdes-y-saludables-vegetales-.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.card-title span {
+    color: var(--color-text);
+    font-size: xx-large;
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+
+.col mat-icon{
+    font-size: medium;
+}
+
+.input-group .input-group-text, .form-control{
+    background: none;
+    border: 1px solid #d3caca;
+    font-size: .5rem;
+    padding-top: 1.2rem;
+    height: 3.1rem;
+    border-radius: 5px;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    background: var(--color-background);
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.btn-sm{
+    height: 2rem;
+}
+
+.btn mat-icon{
+    font-size: medium;
+    padding-top: .2rem;
+}
+
+.btn-actions{
+    padding: 0 .9rem;
+}
+
+input[type="text"]{
+    font-size: small;
+}

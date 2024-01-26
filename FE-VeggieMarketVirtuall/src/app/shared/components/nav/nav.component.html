@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="container py-4 pb-2">
+    <div class="row row-cols-3 align-items-center">
+      <div class="col p-0">
+        <button type="button" class="border-0 d-flex p-0 align-items-center bg-transparent" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+          <mat-icon>menu</mat-icon>
+          <p class="fw-bold m-0 mx-2">Menú</p>
+        </button>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <img src="../../../../favicon.ico" alt="Icono">
+        <p class="fw-bold m-0 mx-2">Veggie Market</p>
+      </div>
+      <div class="col p-0">
+        <button *ngIf="quantyProducts > 0" class="btn-custom float-end shadow-sm d-flex align-items-center"
+          matBadge="{{quantyProducts}}" matBadgePosition="before" matBadgeColor="accent" (click)="ckeckout()">
+          <mat-icon>shopping_cart</mat-icon>
+          <div class="vr"></div>
+          Checkout
+        </button>
+      </div>
+    </div>
+    <div class="hr-custom mt-4"></div>
+  </div>
+</div>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions">
+  <div class="offcanvas-header">
+    <img class="img-nav" src="../../../../favicon.ico" alt="Icono">
+    <span class="offcanvas-title h5 w-100 ms-3 fw-bold" id="offcanvasWithBothOptionsLabel">Veggie Market</span>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="container-sm px-4">
+    <span>Estamos aquí para apoyarte en cada paso del camino. ¡Gracias por elegir Veggie Market!"</span>
+  </div>
+  <div class="offcanvas-body">
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action px-3 border-0 ripple" routerLink="">
+        <mat-icon>home</mat-icon>Home
+      </a>
+      <a class="list-group-item list-group-item-action px-3 border-0 ripple" routerLink="/veggiemarket/products">
+        <mat-icon>grass</mat-icon>Productos
+      </a>
+      <a class="list-group-item list-group-item-action px-3 border-0 ripple" routerLink="/veggiemarket/providers">
+        <mat-icon>groups_2</mat-icon>Comunidad
+      </a>
+      <hr>
+      <a class="list-group-item list-group-item-action px-3 border-0 ripple" routerLink="/auth/login-providers">
+        <mat-icon>manage_accounts</mat-icon>Area de Agricultores
+      </a>
+      <hr>
+      <a class="list-group-item list-group-item-action px-3 border-0 ripple" routerLink="">
+        <mat-icon>contact_support</mat-icon>Conócenos
+      </a>
+    </div>
+  </div>
+</div>

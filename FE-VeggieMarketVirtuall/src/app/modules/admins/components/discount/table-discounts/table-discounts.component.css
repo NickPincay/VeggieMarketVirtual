@@ -1,0 +1,43 @@
+.container-fluid {
+    height: 80vh;
+}
+
+.container div span {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--color-muted);
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background: var(--color-muted);
+    width: 100%;
+}
+
+.btn{
+    font-size: x-small;
+    height: 2rem;
+    margin: 0 .2rem;
+}
+
+.btn mat-icon{
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+}
+  
+td, th {
+    width: 20%;
+    font-size: .8rem;
+}
+
+::ng-deep.modal-backdrop {
+    display: none !important;
+}
+
+.modal-title {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}

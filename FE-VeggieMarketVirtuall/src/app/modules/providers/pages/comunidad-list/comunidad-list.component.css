@@ -1,0 +1,102 @@
+.container-fluid {
+    height: 80vh;
+    background-color: var(--color-muted);
+}
+
+.container div span {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+
+img {
+    height: 1rem;
+}
+
+mat-icon {
+    color: var(--color-muted);
+}
+
+.hr-custom {
+    height: 5px;
+    background-color: var(--color-muted);
+    border-radius: 50% 50% 50% 50%;
+}
+
+.img-nav {
+    height: 2rem;
+}
+
+.offcanvas-title {
+    font-family: 'wilkysta', sans-serif;
+    font-size: xx-large;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+
+a:hover {
+    background-color: var(--color-muted);
+    color: var(--color-background);
+}
+
+a:hover mat-icon {
+    color: var(--color-background);
+}
+
+a mat-icon {
+    margin-right: 1rem;
+}
+
+.active {
+    background-color: var(--Green);
+}
+
+.btn-custom mat-icon {
+    color: white;
+}
+
+.vr {
+    background-color: white;
+    opacity: 1;
+    margin: 0 .5rem;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--color-muted);
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background: var(--color-muted);
+    width: 100%;
+}
+
+.btn {
+    font-size: x-small;
+    height: 2rem;
+    margin: 0 .2rem;
+}
+
+.btn mat-icon {
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    width: 20%;
+    font-size: .8rem;
+}
+
+::ng-deep.modal-backdrop {
+    display: none !important;
+}
+
+.modal-title {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}

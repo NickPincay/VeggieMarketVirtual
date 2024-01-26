@@ -1,0 +1,86 @@
+<div class="container-fluid w-auto d-flex justify-content-center align-items-start p-3 shadow m-3 rounded-3 bg-white">
+    <div class="container">
+
+        <div class="my-2 mb-3">
+            <span class="h4 text-capitalize">Gestionar Promociones</span>
+        </div>
+
+        <mat-progress-bar color="warn" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
+        <div class="row">
+            <div class="col-12">
+                <mat-form-field appearance="legacy" class="w-100">
+                    <mat-label>Filtrar</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Buscar..." #input autocomplete="off">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <table mat-table [dataSource]="dataSource" matSort class="mb-3">
+
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef mat-sort-heade style="width: 30%;"> Nombre </th>
+                <td mat-cell *matCellDef="let row"> {{ row.nombre }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="precio">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
+                <td mat-cell *matCellDef="let row"> {{ row.precio | dollar }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="descuento">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Descuento </th>
+                <td mat-cell *matCellDef="let row"> {{ row.descuento | discount }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nuevoPrecio">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nuevo Precio </th>
+                <td mat-cell *matCellDef="let row"> {{ row | discountPrice }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="accion">
+                <th mat-header-cell *matHeaderCellDef class="text-center"> Acción </th>
+                <td mat-cell *matCellDef="let row">
+                    <div class="container d-flex justify-content-evenly p-0">
+                        <button class="btn btn-outline-primary" *ngIf="!row.descuento" (click)="openAddEdit(row)">
+                            <mat-icon>redeem</mat-icon>
+                        </button>
+                        <button class="btn btn-outline-success" *ngIf="row.descuento" (click)="openAddEdit(row)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button class="btn btn-outline-danger" *ngIf="row.descuento" (click)="recuperarId(row.id)" >
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro "{{input.value}}"</td>
+            </tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5]"></mat-paginator>
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" #staticBackdrop>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger p-3">
+                <h1 class="modal-title fs-4 text-white mb-0" id="staticBackdropLabel">Confirmar eliminación</h1>
+            </div>
+            <div class="modal-body">
+                <p>Esta acción es irreversible y eliminará permanentemente los datos. ¿Estás seguro de que deseas
+                    continuar?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-custom shadow-sm bg-danger rounded-2" (click)="cancel()">Cancelar</button>
+                <button type="button" class="btn-custom shadow-sm rounded-2" (click)="delete()" >Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>

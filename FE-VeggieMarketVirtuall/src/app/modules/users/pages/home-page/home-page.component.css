@@ -1,0 +1,118 @@
+.container-fluid {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.custom-container {
+    height: 31.5rem;
+    border-radius: 40px;
+    box-shadow: -7px 7px 1px var(--color-muted);
+    background: url(../../../../../assets/img/page/home/Banner-Home-1.png) center no-repeat;
+    background-size: cover;    
+    align-items: center;
+    justify-content: end;
+    padding: 8% 50% 0 4%;        
+}
+
+.title {
+    font-family: 'wilkysta', sans-serif;
+    font-size: xxx-large;
+    color: white;    
+}
+
+img {
+    height: 4rem;
+}
+
+.container-center{
+    border-left: 2px solid var(--color-muted);
+    border-right: 2px solid var(--color-muted);
+}
+
+.container-center p {
+    font-size: xx-large;
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+    line-height: 1;
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+.row-info .col:nth-child(1){
+    border-right: 2px solid var(--color-muted);
+}
+
+.col-right {
+    padding: 0 10%;
+}
+
+.container-img {
+    height: 27rem;
+    background: url(../../../../../assets/img/page/home/Banner-Home-2.png) bottom no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: -7px 7px 1px var(--color-muted);
+}
+
+.title-xx-large {
+    font-family: 'wilkysta', sans-serif;
+    font-size: xxx-large;
+    background: none;
+    line-height: 1;
+}
+
+.container-product {
+    background-color: var(--color-muted);
+}
+
+.container-product .container .row .col img{
+    height: 18rem;    
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: -7px 7px 1px var(--color-highlight);
+    margin-bottom: 1.3rem; 
+    object-fit: cover;
+}
+
+.container-product .container .row .col p{
+    color: white;
+    background: transparent;
+    line-height: 1.3;
+    font-size: smaller;    
+}
+
+.container-product .container .row .col a{
+    color: var(--color-highlight);
+    background: transparent;
+    font-size: small;
+    text-decoration: none;
+    transition: ease-in-out 100ms;
+}
+
+.container-product .container .row .col a:hover{
+    color: white;
+}
+
+.row-img-supplier .col img {
+    height: 24rem;
+    border-radius: 20px;
+    box-shadow: -7px 7px 1px var(--color-muted);
+}
+
+.container-supplier {
+    background: url(../../../../../assets/img/page/home/Banner-Home-8.png) no-repeat top;
+    background-size: cover;
+    height: 40rem;
+}
+
+.container-supplier .container {
+    margin-right: 10%;
+    margin-top: 8%;
+}
+
+.hr-custom {
+    height: 5px; 
+    background-color: var(--color-muted); 
+    border-radius: 50% 50% 50% 50%;
+}

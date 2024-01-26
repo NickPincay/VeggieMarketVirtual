@@ -1,0 +1,40 @@
+<div class="h-auto pt-5 p-2 ">
+    <div class="col-cards-title d-flex align-items-center justify-content-between">
+        <div class="d-flex">
+            <div class="rectangle"></div>
+            <mat-icon class="text-white">{{icon}}</mat-icon>
+            <p class="title m-0 ms-2 pt-1">{{title}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-cart px-3 pt-4 mt-5">
+    <div class="row">
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <button class="btn rounded-circle" (click)="leftClick()">
+                <mat-icon>arrow_back_ios</mat-icon>
+            </button>
+        </div>
+
+        <div class="col-10">
+            <div class="row d-flex flex-nowrap container-card">
+                <ng-container *ngFor="let item of mediator">
+                    <div *ngIf="numeroCard === 3; else col4" class="col-sm-5 col-md-4 d-flex justify-content-center align-items-center">
+                        <app-card-product [productsLocal]="item"></app-card-product>
+                    </div>
+                    <ng-template #col4>
+                        <div *ngIf="numeroCard === 4" class="col-sm-4 col-md-3 d-flex justify-content-center align-items-center">
+                            <app-card-product [productsLocal]="item"></app-card-product>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </div>                
+        </div>
+
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <button class="btn rounded-circle px-0" (click)="rightClick()">
+                <mat-icon>arrow_forward_ios</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,152 @@
+::ng-deep.mat-dialog-container {
+    background-color: var(--color-background);
+}
+
+.card {
+    width: 250px;
+    height: auto;
+    background: var(--color-background);
+    color: var(--color-text);
+    border: none;
+    gap: 8px;
+}
+
+.ribbon {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 0;
+}
+
+.ribbon_content {
+    left: 20px;
+    top: 17px;
+    transform: rotate(45deg);
+    position: absolute;
+    display: block;
+    width: 195px;
+    padding: 5px 0;
+    background-color: #F70E0E;
+    color: var(--color-background);
+    text-transform: uppercase;
+    font-size: xx-small;
+    text-align: center;
+    border: 2px dotted var(--color-background);
+    outline: 5px solid var(--color-highlight);
+}
+
+.ribbon::before {
+    content: '';
+    top: 0;
+    left: 52px;
+    border-right-color: transparent;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    border: 4px solid black;
+    box-sizing: content-box;
+}
+
+.ribbon::after {
+    bottom: 52.5px;
+    right: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 2.1px solid black;
+}
+
+.card:last-child {
+    justify-content: flex-end;
+}
+
+.card-img {
+    transition: all 0.5s;
+}
+
+img {
+    transform: scale(1.1);
+    width: auto;
+    height: 125px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+    color: var(--font-color);
+    font-family: 'wilkysta', sans-serif;
+    margin-top: .5rem;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    color: var(--font-color-sub);
+    font-family: 'Gilroy-Light', sans-serif;
+    margin-bottom: .5rem;
+}
+
+.card p {
+    display: flex;
+    margin: 0;
+    font-size: small;
+}
+
+.card p mat-icon {
+    font-size: medium;
+}
+
+.card-divider {
+    width: 100%;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-background);
+}
+
+.card-price {
+    font-size: large;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.card-img:hover {
+    transform: translateY(-3px);
+}
+
+.f-price span {
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+
+.f-price .discounted-price {
+    font-family: 'Gilroy-Light', sans-serif;
+}
+
+.discounted-price {
+    text-decoration: line-through;
+    margin-right: 5px;
+    font-weight: 100;
+}
+
+.btn-dark {
+    background-color: var(--color-highlight);
+    color: black;
+    opacity: 1;
+    width: 4rem;
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+
+em {
+    font-size: xx-small;
+}

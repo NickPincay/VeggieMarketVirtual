@@ -1,0 +1,41 @@
+.btn {
+    border: none;
+}
+
+.btn mat-icon {
+    font-weight: bold;
+    color: var(--color-background);
+}
+
+.col-cards-title .title {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'wilkysta', sans-serif;
+    font-size: large;
+    text-transform: capitalize;
+}
+
+.rectangle {
+    width: 2px;
+    height: 30px;
+    background-color: var(--color-background);
+    margin-right: 5px;
+}
+
+.container-cart {
+    height: 25rem;
+}
+
+
+@media (max-width: 1236px) {
+    .container-card {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1013px) {
+    .container-card {
+        justify-content: space-around;
+    }
+}

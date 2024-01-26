@@ -1,0 +1,41 @@
+<div class="row row-cols-2">
+    <div class="col-3 col-imagen"></div>
+    <div class="col w-75">
+        <div class="card-title ms-2 w-100">
+            <span class="h3 text-uppercase">{{title}}</span>
+        </div>
+        <div class="container-sm w-100">
+            <form [formGroup]="form" (ngSubmit)="submit()">
+
+                <div class="row mt-4 mb-3">
+                    <div class="col">
+                        <span class="h6 fw-bold text-uppercase">{{data.nombre}}</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Descuento </mat-label>
+                            <input type="number" matInput autocomplete="off" formControlName="descuento">
+                            <mat-icon matPrefix>tag</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <button class="btn btn-danger btn-sm w-100" mat-dialog-close>
+                            <mat-icon> cancel </mat-icon>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn-custom btn-sm rounded-1 w-100" type="submit">
+                            <mat-icon>{{iconName}}</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

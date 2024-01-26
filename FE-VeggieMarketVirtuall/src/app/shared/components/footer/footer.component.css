@@ -1,0 +1,36 @@
+img {
+    height: 3rem;
+}
+
+p {
+    font-size: x-large;
+    font-family: 'Gilroy-ExtraBold', sans-serif;
+    line-height: 1;
+}
+
+.col {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: 'Gilroy-ExtraBold', sans-serif; 
+}
+
+a:hover {       
+    text-shadow: white 0.1em 0.1em 0.2em
+}
+
+.hr-custom {
+    height: 5px; 
+    background-color: var(--color-muted); 
+    border-radius: 50% 50% 50% 50%;
+}
+
+.footer-text {
+    font-size: x-small;
+    font-weight: bold;
+    color: #333;
+    margin-top: .5rem;
+}

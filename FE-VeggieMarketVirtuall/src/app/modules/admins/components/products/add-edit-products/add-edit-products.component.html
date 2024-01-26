@@ -1,0 +1,97 @@
+<div class="row row-cols-2">
+    <div class="col-3 col-imagen"></div>
+    <div class="col w-75">
+        <div class="card-title w-100">
+            <span class="h2 ms-3 text-uppercase">{{title}}</span>
+        </div>
+        <div class="container-sm w-100">
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="row row-cols-2 mt-4">
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Nombre </mat-label>
+                            <input type="text" matInput autocomplete="off" formControlName="nombre">
+                            <mat-icon matPrefix>border_color</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Categoria </mat-label>
+                            <mat-select formControlName="categoria">
+                                <mat-option *ngFor="let item of categories" [value]="item.id">
+                                    {{item.nombre}}</mat-option>
+                            </mat-select>
+                            <mat-icon matPrefix>category</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Precio </mat-label>
+                            <input type="number" matInput autocomplete="off" formControlName="precio">
+                            <mat-icon matPrefix>payments</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Cantidad </mat-label>
+                            <input type="number" matInput autocomplete="off" formControlName="cantidad">
+                            <mat-icon matPrefix>tag</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Nombre Agricultor </mat-label>
+                            <input type="text" matInput autocomplete="off" formControlName="nombreAgricultor">
+                            <mat-icon matPrefix>person</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Cosecha </mat-label>
+                            <input type="date" matInput autocomplete="off" formControlName="cosecha">
+                            <mat-icon matPrefix>calendar_month</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Descripcion </mat-label>
+                            <input type="text" matInput autocomplete="off" formControlName="descripcion">
+                            <mat-icon matPrefix>description</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <div class="input-group mt-1">
+                            <label class="input-group-text p-1" for="inputGroupFile01">
+                                <mat-icon class="icon-file" matPrefix>upload_file</mat-icon>
+                            </label>
+                            <input type="file" class="form-control" id="inputGroupFile01"
+                                (change)="onFileSelected($event)" formControlName="imagenName">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <button class="btn btn-danger btn-sm w-100" mat-dialog-close>
+                            <mat-icon> cancel </mat-icon>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn-custom btn-sm rounded-1 w-100" type="submit">
+                            <mat-icon>{{iconName}}</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="container-fluid vh-100 p-0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 form-login pt-5">
+                <div class="px-5 ms-xl-4 mt-4 pb-5">
+                    <span class="mb-0 text-title">Administra tus productos</span>
+                    <div class="text-subtitle fst-italic">
+                        Acceso restringido a personal autorizado
+                    </div>
+                </div>
+
+                <div class="ps-5 w-100 ms-xl-4 mt-4">
+                    <form [formGroup]="form" (ngSubmit)="handleSubmit()">
+                        <div class="d-flex align-items-center title-login pb-2">
+                            <mat-icon class="mb-2">badge</mat-icon>
+                            <span class="ms-2">Credenciales</span>
+                        </div>
+                        <div class=" mb-1 mt-4">
+                            <mat-form-field appearance="outline" class="w-75">
+                                <mat-label>Usuario</mat-label>
+                                <input type="text" matInput autocomplete="off" formControlName="username">
+                                <mat-icon matSuffix>account_circle</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="mb-0">
+                            <mat-form-field appearance="outline" class="w-75">
+                                <mat-label>Contraseña</mat-label>
+                                <input type="password" matInput autocomplete="off" formControlName="password">
+                                <mat-icon matSuffix>key</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="pt-4 mb-4 mt-0">
+                            <button class="btn btn-sm btn-dark shadow-sm w-75" type="submit">
+                                <div class="d-flex justify-content-center align-items-center pb-1">
+                                    <mat-icon>grass</mat-icon>
+                                    <span class="pt-2 ms-2 text-uppercase">Login</span>
+                                </div>
+                                <mat-progress-bar color="warn" mode="indeterminate" *ngIf="bandera"></mat-progress-bar>
+                            </button>
+                        </div>
+                        <div class="w-75 text-center pt-2 text-footer">
+                            <span>
+                                Esta área está reservada exclusivamente para agricultores registrados en la comunidad. Si aún no estás registrado, te invitamos a completar el proceso de registro haciendo clic. <br> 
+                                <a class="d-flex justify-content-center align-items-center text-uppercase" href="#">
+                                    <mat-icon class="me-1">link</mat-icon>Aquí
+                                </a>.
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block shadow-sm">
+                <img src="../../../../assets/img/auth/Banner-Login-Providers.png" alt="Login image" class="w-100 vh-100"
+                    style="object-fit: cover; object-position: left;">
+            </div>
+        </div>
+    </div>
+</div>

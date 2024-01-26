@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="ribbon" *ngIf="productsLocal?.descuento">
+        <span class="ribbon_content">{{productsLocal!.descuento | discount}}</span>
+    </div>
+    <div class="card-img d-flex justify-content-center">
+        <img src="../../../../../assets/img/products/local/{{productsLocal.imagenName}}.png" alt="imagen">
+    </div>
+    <span class="card-title fw-bold text-center text-capitalize">{{productsLocal.nombre}}</span>
+    <span class="card-subtitle">{{productsLocal.descripcion}}.</span>
+    <p><mat-icon>event</mat-icon>{{productsLocal.cosecha | dateFormat}}</p>
+    <p><mat-icon>agriculture</mat-icon>{{productsLocal.nombreAgricultor}}</p>
+    <p class="f-price fst-italic">
+        <mat-icon>price_check</mat-icon>
+        <ng-container *ngIf="productsLocal?.descuento">
+            <span class="discounted-price">{{productsLocal.precio | dollar}}</span>
+            <span class="text-danger">{{ (productsLocal.precio - (productsLocal.precio * productsLocal.descuento! / 100)) | dollar}}</span>
+        </ng-container>
+        <ng-container *ngIf="!productsLocal?.descuento">
+            <span>{{productsLocal.precio | dollar}}</span>
+        </ng-container>
+    </p>
+    <div class="card-footer px-0 pt-4">
+        <div class="row row-cols-2 m-0 w-100">
+            <div class="col p-0">
+                <p><em>Libras*</em></p>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-dark" (click)="decreaseQuantity()">-</button>
+                    <button type="button" class="btn btn-dark" disabled>{{ currentQuantity }}</button>
+                    <button type="button" class="btn btn-outline-dark" (click)="increaseQuantity()">+</button>
+                </div>
+            </div>
+            <div class="col d-flex align-items-end justify-content-end">
+                <button 
+                    class="icon-cart d-flex align-items-center rounded-circle shadow-sm" (click)="addCart(productsLocal)">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

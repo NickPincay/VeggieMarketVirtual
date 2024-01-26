@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="ribbon" *ngIf="data?.descuento">
+        <span class="ribbon_content">{{data!.descuento | discount}}</span>
+    </div>
+    <div class="card-img d-flex justify-content-center">
+        <img src="../../../../../../assets/img/products/local/{{data.imagenName}}.png" alt="imagen">
+    </div>
+    <hr>
+    <span class="card-title fw-bold text-center text-capitalize">{{data.nombre}}</span>
+    <span class="card-subtitle">{{data.descripcion}}.</span>
+    <p><mat-icon>category</mat-icon>{{data.categoria.nombre}}</p>
+    <p><mat-icon>tag</mat-icon>{{data.cantidad}}</p>
+    <p><mat-icon>event</mat-icon>{{data.cosecha | dateFormat}}</p>
+    <p><mat-icon>agriculture</mat-icon>{{data.nombreAgricultor}}</p>
+    <p class="f-price fst-italic">
+        <mat-icon>price_check</mat-icon>
+        <ng-container *ngIf="data?.descuento">
+            <span class="discounted-price">{{data.precio | dollar}}</span>
+            <span class="text-danger">{{ (data.precio - (data.precio * data.descuento! / 100)) | dollar}}</span>
+        </ng-container>
+        <ng-container *ngIf="!data?.descuento">
+            <span>{{data.precio | dollar}}</span>
+        </ng-container>
+    </p>
+    <hr>
+</div>

@@ -1,0 +1,14 @@
+.container-fluid {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    width: 20%;
+    font-size: .8rem;
+}
